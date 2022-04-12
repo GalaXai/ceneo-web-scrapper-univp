@@ -1,0 +1,115 @@
+.header {
+  background-color: rgb(38, 38, 38);
+  padding: 20px;
+  text-align: center;
+  color: rgb(191, 191, 191);
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: rgb(255, 141, 10);
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+  text-align: center;
+  color: rgb(191, 191, 191);
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+.footer {
+  background-color: rgb(51, 51, 51);
+  padding: 10px;
+  text-align: center;
+  color:rgb(191, 191, 191);
+}
+
+.tekst{
+  padding: 10px;
+  text-align: center;
+  color:rgb(191, 191, 191);
+}
+
+
+/* formatowanie tabeli */
+#worker {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#worker td, #worker th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#worker tr:nth-child(even){background-color: rgb(51, 51, 51);}
+
+#worker tr:hover {background-color: #04AA6D;}
+
+#worker th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgb(255, 141, 10);
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+.piechart{
+padding-top: 3em;
+padding-bottom: 2em;
+width: 100%;
+float: left;
+justify-content: center;
+align-items: center;
+display: flex;
+}
+
+.barchart{
+width: 100%;
+justify-content: center;
+align-items: center;
+margin-bottom:2em;
+display: flex;
+}
+.topbar{
+width:100%;
+min-height: 100%;
+height:50px;
+margin-top: 0;
+background-color: black;
+display: flex;
+justify-content: left;
+align-items: center;
+
+}

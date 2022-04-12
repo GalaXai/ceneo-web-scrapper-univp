@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        body {
+      margin: 0;
+      background-color: rgb(31, 31, 31);
+    }
+    </style>
+    <title>Ceneo Scrapper</title>
+    </head>
+    <form action = "http://localhost:5000/result" method = "POST">
+        <div class ="row tekst">
+            <h1>{{error}}</h1>
+            <p>ID of the product</p>
+            <p><input type = "text" name = "Id" /></p>  <!--Ekstrakcja opinii-->
+            <p><input type = "submit" value = "submit" /></p>
+        </div>
+     </form>
+     <div class ="row tekst">
+        <div class = "column">
+            <h1>About Author</h1>
+            <p>I'm a first-year student of Applied Informatics at Krakow University of Economics.</p>
+            <p>I come from small town on the east of Poland named Żagań.</p>
+        </div>
+        <div class = "column">
+            <h2>About app</h2>
+            <p>The app was made to scrap opinions about the product  from ceneo website and show statistics about it</p>
+        </div>
+        <div class = "column">
+            <h3>tech used in app</h3>
+            <p>Flask</p>
+            <p>Pandas</p>
+            <p>Beautiful Soup</p>
+            <p>Css</p>
+        </div>
+
+     </div>
+     <div class = "footer">
+         Made by Szymon Hawryluk
+     </div>
+     <!-- • Widzę menu z dostępnymi opcjami:
+        ➢ Ekstrakcja opinii
+        ➢ Lista produktów
+        ➢ Strona główna
+        ➢ O autorze
+        • Widzę krótki opis projektu
+        ➢ Cel aplikacji
+        ➢ Opis działania aplikacji
+        ➢ Zastosowane biblioteki
+        ➢ Zastosowane podejścia -->
+</html>

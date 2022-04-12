@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+        * {
+          box-sizing: border-box;
+        }
+        body {
+      margin: 0;
+      background-color: rgb(31, 31, 31);
+    }
+	.tekst{
+	  padding: 10px;
+ 	 text-align: center;
+ 	 color:rgb(191, 191, 191);
+	}
+	.piechart{
+	padding-top: 3em;
+	padding-bottom: 2em;
+	width: 100%;
+	float: left;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	}
+
+	.barchart{
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	margin-bottom:2em;
+	display: flex;
+	}
+	</style>
+	<title>Graphs</title>
+</head>
+<body>
+	<input type="hidden" id="firstChartData" value="{{firstChartData}}" />
+	<input type="hidden" id="secondChartData" value="{{secondChartData}}" />
+	<div class = "tekst">
+		<h2>Graphs</h2>
+	</div>
+	<div class = "tekst">
+		<p>The first pie chart shows us Helpfull to Unhelpfull Opinions ratio/p>
+		<div class = "piechart"><canvas id="firstChart" style="width:100%;max-width:300px;height:100%;max-height:500px;"></canvas></div>
+		<p>The second bar chart shows us how grades discribution</p>
+		<div class= "barchart" ><canvas id="secondChart" style="width:100%;max-width:1000px;height:100%;max-height:2000px;"></canvas></div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script>
+		const firstChartData = JSON.parse(
+		document.querySelector('#firstChartData').value
+	);
+		const firstChartConfig = {
+			type: "pie",
+			data: {
+				labels: Object.keys(firstChartData),
+				datasets: [
+					{
+						label: "Positive/Negative opinions",
+						backgroundColor: ["rgb(67,146,241)", "rgb(241,162,67)"],
+						borderColor: ["rga(67,146,241)", "rgb(241,162,67)"],
+						borderWidth: 1,
+						data: Object.values(firstChartData),
+					},
+				],
+			},
+			options: {},
+		};
+		const firstChart = new Chart(
+			document.getElementById("firstChart"),
+			firstChartConfig
+		);
+		const secondChartData = JSON.parse(
+		document.querySelector('#secondChartData').value
+		);
+		const secondChartConfig = {
+			type: "bar",
+			data: {
+				labels: Object.keys(secondChartData),
+				datasets: [
+					{
+						label: "Distribution of grades",
+						backgroundColor: ["rgb(67,146,241)", "rgb(241,162,67)"],
+						borderColor: ["rgb(67,146,241)", "rgb(241,162,67)"],
+						borderWidth: 1,
+						data: Object.values(secondChartData),
+					},
+				],
+			},
+			options: {},
+		};
+		const secondChart = new Chart(
+			document.getElementById("secondChart"),
+			secondChartConfig
+		);
+	</script>
+</body>
+</html>
